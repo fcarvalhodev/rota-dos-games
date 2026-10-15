@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Games Route</title>
+<meta name="description" content="Support for games in Brazil from 2003 to 2026, explained simply: grants, the Rouanet Law, the tax on consoles, the Games Legal Framework and the 2026 package, government by government.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: the Rotas skeleton in the easy-reading format. The Games route colour is violet. Order: question, short answer, four kinds of support, each government, side by side, console tax, studios, true or false, summary, full table. */
+:root{
+  --bg:#f1f1f5; --paper:#fbfbfd; --ink:#1b1b24; --muted:#5b5b6b; --line:#d5d5e0; --soft:#e6e6ee;
+  --accent:#6d28d9; --accent-soft:#ede5fb;
+  --dist:#5b6b7a; --state:#7a3e8f; --eth:#3f7d3a; --fed:#b3261e;
+  --g-dilma:#c2185b; --g-temer:#4e5d6c; --g-bolso:#1d5fa8; --g-lula:#c62828;
+  --court:#8a6512; --court-soft:#f4ead2; --gray:#8a8c92;
+  --ok:#1f6b45; --ok-soft:#dcefe3; --no:#a12a2a; --no-soft:#f6dede; --part:#7a5a00; --part-soft:#f6ebc9; --open:#6b5bb5; --open-soft:#e8e5f6;
+  --display:"Archivo","Arial Narrow",Impact,sans-serif;
+  --ui:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121218; --paper:#1a1a22; --ink:#ebebf2; --muted:#a5a5b5; --line:#2e2e3a; --soft:#24242e;
+  --accent:#c4b5fd; --accent-soft:#2a1f47;
+  --dist:#9fb0c0; --state:#c99ad8; --eth:#8fcf88; --fed:#f08a82;
+  --g-dilma:#f48fb1; --g-temer:#a9b6c4; --g-bolso:#7fb2ec; --g-lula:#ef9a9a;
+  --court:#e0b552; --court-soft:#3a2e14; --gray:#6e7077;
+  --ok:#7fd3a3; --ok-soft:#173326; --no:#f19b9b; --no-soft:#3a1c1c; --part:#e8c25a; --part-soft:#3a3016; --open:#a99cf0; --open-soft:#29254a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121218; --paper:#1a1a22; --ink:#ebebf2; --muted:#a5a5b5; --line:#2e2e3a; --soft:#24242e;
+  --accent:#c4b5fd; --accent-soft:#2a1f47;
+  --dist:#9fb0c0; --state:#c99ad8; --eth:#8fcf88; --fed:#f08a82;
+  --g-dilma:#f48fb1; --g-temer:#a9b6c4; --g-bolso:#7fb2ec; --g-lula:#ef9a9a;
+  --court:#e0b552; --court-soft:#3a2e14; --gray:#6e7077;
+  --ok:#7fd3a3; --ok-soft:#173326; --no:#f19b9b; --no-soft:#3a1c1c; --part:#e8c25a; --part-soft:#3a3016; --open:#a99cf0; --open-soft:#29254a; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:19px;line-height:1.7}
+a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:880px;margin:0 auto;padding-inline:16px}
+.kicker,.mono{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.kicker{color:var(--accent)}
+h1{font-family:var(--display);font-stretch:62%;font-weight:900;font-size:clamp(46px,11vw,104px);line-height:.9;margin:0;text-transform:uppercase;overflow-wrap:anywhere}
+h2{font-family:var(--display);font-stretch:66%;font-weight:800;font-size:clamp(34px,7vw,52px);line-height:.95;margin:0;text-transform:uppercase;text-wrap:balance}
+h3{font-family:var(--ui);font-weight:700;font-size:22px;line-height:1.2;margin:0;text-wrap:balance}
+p{margin:0}
+header,section{display:grid;grid-template-columns:minmax(0,1fr)}
+header{padding-block:40px 8px;gap:18px}
+section{padding-block:48px 8px;gap:18px}
+.lg{font-size:21px;line-height:1.6}
+.sub{color:var(--muted);max-width:62ch}
+.src{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:2px 14px;line-height:1.5}
+.src a{color:var(--muted)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:20px;display:grid;gap:12px;align-content:start}
+.answer-box{background:var(--accent-soft);border:2px solid var(--accent);border-radius:6px;padding:20px;margin-top:40px}
+.note{font-size:16px;color:var(--muted)}
+.rv-btn{display:inline-flex;align-items:center;gap:8px;justify-self:start;font-family:var(--ui);font-weight:800;font-size:16px;letter-spacing:.02em;text-decoration:none;color:var(--paper);background:var(--accent);padding:10px 16px;border-radius:999px;box-shadow:0 2px 0 rgba(0,0,0,.15)}
+.rv-btn:hover{filter:brightness(1.08)}
+
+/* four ways */
+.path{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:stretch}
+.stop{background:var(--paper);border:2px solid var(--accent);border-radius:8px;padding:14px 10px;display:grid;gap:6px;justify-items:center;text-align:center;align-content:start}
+.stop .emo{font-size:40px;line-height:1}
+.stop b{font-family:var(--ui);font-size:17px;line-height:1.2}
+.stop span{font-size:15px;color:var(--muted);line-height:1.4}
+.stop.court{border-color:var(--court);background:var(--court-soft)}
+.stop.court b{color:var(--court)}
+.who-decides{display:grid;grid-template-columns:1fr 3fr;gap:8px;font-family:var(--ui);font-weight:700;font-size:15px;text-align:center}
+.who-decides span{padding:6px;border-radius:4px}
+.who-decides .j{background:var(--court-soft);color:var(--court)}
+.who-decides .m{background:var(--accent-soft);color:var(--accent)}
+
+/* cases */
+.cases{display:grid;gap:12px}
+.case{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--c,var(--accent));border-radius:6px;padding:16px 18px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:4px 16px}
+.case .when{font-family:var(--mono);font-size:13px;color:var(--muted);line-height:1.4;padding-top:4px}
+.case .bd{display:grid;gap:6px}
+.case h3{font-size:21px}
+.case .who{font-family:var(--ui);font-size:15px;color:var(--muted);line-height:1.3}
+.case p{font-size:17px;line-height:1.55}
+.case .chips{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.st{font-family:var(--ui);font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;border:2px solid currentColor}
+.st.y{color:var(--ok);background:var(--ok-soft)}
+.st.n{color:var(--no);background:var(--no-soft)}
+.st.j{color:var(--court);background:var(--court-soft)}
+.st.g{color:var(--muted);background:var(--soft)}
+.why{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.4}
+.group-t{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+/* count */
+.tally{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px;max-width:520px}
+.tally i{aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-style:normal;font-family:var(--ui);font-weight:900;font-size:clamp(14px,3vw,22px);color:var(--paper)}
+.tally i.y{background:var(--ok)}
+.tally i.n{background:var(--no)}
+.leg{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--ui);font-weight:600;font-size:16px}
+.leg i{display:inline-block;width:16px;height:16px;border-radius:50%;background:var(--c);margin-right:6px;vertical-align:-2px}
+
+/* newspaper analogy */
+.jar{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.jar .card{border-top:6px solid var(--c)}
+.jar .card .emo{font-size:40px;line-height:1}
+.jar .card p{font-size:17px}
+.jar .card b{font-family:var(--ui);font-size:20px;line-height:1.3}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.two .card{border-top:6px solid var(--c)}
+.two .card h3{font-size:20px}
+.two .card ul{margin:0;padding-left:20px;display:grid;gap:8px;font-size:17px;line-height:1.5}
+
+/* true or false */
+.vf{display:grid;gap:12px}
+.vfi{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:8px}
+.vfi p{font-size:18px}
+.badge{justify-self:start;font-family:var(--ui);font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.badge.f{background:var(--no-soft);color:var(--no);border:2px solid var(--no)}
+.badge.m{background:var(--part-soft);color:var(--part);border:2px solid var(--part)}
+.badge.v{background:var(--ok-soft);color:var(--ok);border:2px solid var(--ok)}
+.badge.o{background:var(--open-soft);color:var(--open);border:2px solid var(--open)}
+
+/* de-para */
+.dp{width:100%;border-collapse:separate;border-spacing:0;background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;font-size:16px;line-height:1.45}
+.dp th,.dp td{padding:12px 12px;text-align:left;vertical-align:top;border-top:1px solid var(--line)}
+.dp thead th{border-top:none;font-family:var(--ui);font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase}
+.dp thead th.l{color:var(--no);background:var(--no-soft)}
+.dp thead th.r{color:var(--accent);background:var(--accent-soft)}
+.dp tbody th{font-family:var(--ui);font-weight:700;font-size:15px;width:24%}
+.dp .tg,.card .tg{display:inline-block;margin-top:6px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid currentColor}
+.dp .tg.d,.card .tg.d{color:var(--ok)}.dp .tg.a{color:var(--part)}.dp .tg.o{color:var(--open)}
+@media (max-width:640px){.dp,.dp thead,.dp tbody,.dp tr,.dp th,.dp td{display:block;width:100%}.dp thead{display:none}.dp tbody tr{border-top:2px solid var(--line)}.dp tbody th{background:var(--soft);width:100%}.dp td::before{content:attr(data-l);display:block;font-family:var(--ui);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}.dp td.l::before{color:var(--no)}.dp td.r::before{color:var(--accent)}}
+/* bars */
+.tl{display:grid;gap:10px}
+.tr{display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
+.tr .lab{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-family:var(--ui);font-weight:700;font-size:17px}
+.tr .lab span{font-family:var(--mono);font-weight:500;font-size:13px;color:var(--muted)}
+.tr .t{height:30px;background:var(--soft);border-radius:3px;position:relative}
+.tr .f{position:absolute;inset:0 auto 0 0;background:var(--c);border-radius:3px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:var(--paper);font-family:var(--mono);font-weight:600;font-size:14px;white-space:nowrap}
+.tr .v{position:absolute;top:0;bottom:0;display:flex;align-items:center;font-family:var(--mono);font-weight:600;font-size:14px;color:var(--ink);white-space:nowrap}
+.verdict{background:var(--ink);color:var(--paper);border-radius:6px;padding:22px 20px;display:grid;gap:12px}
+.verdict h2{color:var(--paper)}
+.verdict ul{margin:0;padding-left:20px;display:grid;gap:8px;font-size:20px}
+details.mais{margin-top:44px;border:2px solid var(--line);border-radius:6px;background:var(--paper)}
+details.mais>summary{cursor:pointer;padding:18px 20px;font-family:var(--ui);font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.mais>summary::after{content:"+";font-family:var(--mono);font-size:24px;line-height:1}
+details.mais[open]>summary::after{content:"−"}
+details.mais>summary::-webkit-details-marker{display:none}
+.mais-body{padding:0 20px 20px;font-size:17px;line-height:1.6;display:grid;gap:14px}
+.tbl{overflow-x:auto}
+.mais-body table{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+.mais-body th,.mais-body td{text-align:left;padding:8px 6px;border-top:1px solid var(--line);vertical-align:top}
+.mais-body th{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.mais-body td:first-child{font-family:var(--mono);white-space:nowrap;font-size:13px}
+footer{padding-block:44px 60px;color:var(--muted);font-size:14px;display:grid;gap:8px}
+@media (max-width:640px){.path{grid-template-columns:repeat(2,minmax(0,1fr))}.who-decides{grid-template-columns:1fr}.case{grid-template-columns:minmax(0,1fr)}.case .when{padding-top:0}}
+
+/* where the litre goes */
+.stack{display:flex;height:46px;border-radius:6px;overflow:hidden;gap:2px}
+.stack i{flex:var(--w) 1 0;background:var(--c)}
+.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.part{background:var(--paper);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:6px;padding:12px 14px;display:grid;gap:2px;align-content:start}
+.part b{font-family:var(--display);font-stretch:70%;font-weight:900;font-size:34px;line-height:1;color:var(--c)}
+.part span{font-family:var(--ui);font-weight:700;font-size:17px}
+.part small{font-size:14px;color:var(--muted);line-height:1.4}
+/* governments */
+.gov{background:var(--paper);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px;padding:18px 20px;display:grid;gap:12px}
+.gov .gh{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px}
+.gov .gh h3{font-size:24px;color:var(--c)}
+.gov .gh span{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.gov ul{margin:0;padding-left:0;list-style:none;display:grid;gap:12px;font-size:17px;line-height:1.55}
+.gov li{padding-left:28px;position:relative}
+.gov li>b.up,.gov li>b.dn{position:absolute;left:0;top:0;font-family:var(--ui);font-size:20px}
+b.up{color:var(--no)} b.dn{color:var(--ok)}
+.gov .tg{display:inline-block;margin-left:4px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:1px 8px;border-radius:999px;border:1px solid currentColor;color:var(--ok)}
+/* price chart */
+.chart{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 8px 6px}
+.chart svg{display:block;width:100%;height:auto}
+.chart .ax{stroke:var(--line)}
+.chart .gl{stroke:var(--soft)}
+.chart text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.chart .era{font-family:var(--ui);font-weight:800;font-size:12px}
+.chart .nom{fill:none;stroke:var(--accent);stroke-width:2.5}
+.chart .real{fill:none;stroke:var(--ink);stroke-width:2;stroke-dasharray:5 4}
+.chart .pk{fill:var(--accent)}
+.chart .lbl{font-family:var(--ui);font-weight:700;font-size:12px;fill:var(--ink);paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round}
+.chart .era{paint-order:stroke;stroke:var(--paper);stroke-width:3px}
+.keyl{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--ui);font-weight:600;font-size:15px}
+.keyl i{display:inline-block;width:22px;height:0;border-top:3px solid var(--accent);vertical-align:4px;margin-right:6px}
+.keyl i.r{border-top:3px dashed var(--ink)}
+.govcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.gc{background:var(--paper);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:6px;padding:12px 14px;display:grid;gap:4px;align-content:start}
+.gc h3{font-size:19px;color:var(--c)}
+.gc .n{font-family:var(--display);font-stretch:70%;font-weight:900;font-size:40px;line-height:1}
+.gc small{font-size:14px;color:var(--muted);line-height:1.4}
+.card .big{font-family:var(--display);font-stretch:70%;font-weight:900;font-size:64px;line-height:1;color:var(--c)}
+.gov .tg.o{color:var(--open)}
+</style>
+</head><body>
+
+
+<style>/* barra comum das Rotas */.rotas-bar .rb-lang{margin-left:auto;color:var(--accent);font-weight:600}.rotas-bar{border-bottom:1px solid var(--line);background:var(--bg);font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}.rotas-bar>div{max-width:880px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}.rotas-bar a{color:var(--muted);text-decoration:none;padding-block:2px;border-bottom:2px solid transparent}.rotas-bar a:hover{color:var(--ink)}.rotas-bar a[aria-current]{color:var(--ink);border-bottom-color:var(--accent)}.rotas-bar .rb-home{color:var(--accent);font-weight:600}.rotas-bar a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}</style><style>/* padrão das Rotas: formato fácil */body{font-size:19px;line-height:1.7}h1{font-family:var(--display);font-stretch:62%;font-weight:900;font-size:clamp(46px,11vw,104px);line-height:.9;text-transform:uppercase;overflow-wrap:anywhere}h2{font-family:var(--display);font-stretch:66%;font-weight:800;font-size:clamp(34px,7vw,52px);line-height:.95;text-transform:uppercase}</style><nav class="rotas-bar" aria-label="Routes"><div><a class="rb-home" href="https://fcarvalhodev.github.io/rotas/en/">Routes</a><a href="https://fcarvalhodev.github.io/rota-washington/en/">Washington</a><a href="https://fcarvalhodev.github.io/rota-master/en/">Master</a><a href="https://fcarvalhodev.github.io/rota-curitiba/en/">Curitiba</a><a href="https://fcarvalhodev.github.io/rota-da-fe/en/">Faith</a><a href="https://fcarvalhodev.github.io/rota-esplanada/en/">Esplanada</a><a href="https://fcarvalhodev.github.io/rota-itamaraty/en/">Itamaraty</a><a href="https://fcarvalhodev.github.io/rota-da-picanha/en/">Picanha</a><a href="https://fcarvalhodev.github.io/rota-do-ibge/en/">IBGE</a><a href="https://fcarvalhodev.github.io/rota-velho-chico/en/">Velho Chico</a><a href="https://fcarvalhodev.github.io/rota-do-tesouro/en/">Treasury</a><a href="https://fcarvalhodev.github.io/rota-rouanet/en/">Rouanet</a><a href="https://fcarvalhodev.github.io/rota-dos-ventos/en/">Winds</a><a href="https://fcarvalhodev.github.io/rota-do-algoritmo/en/">Algorithm</a><a href="https://fcarvalhodev.github.io/rota-do-posto/en/">Pump</a><a href="https://fcarvalhodev.github.io/rota-das-queimadas/en/">Fires</a><a href="https://fcarvalhodev.github.io/rota-dos-games/en/" aria-current="page">Games</a><a class="rb-lang" href="../" hreflang="pt-BR" lang="pt-BR">PT</a></div></nav>
+<header class="wrap">
+  <div class="kicker">Games Route</div>
+  <h1>Who did the most for games in Brazil?</h1>
+  <p class="lede lg">Grants, laws, taxes and credit for people who make games, from 2003 to today: what each government did, how much money went out and what is only an announcement. With the same standard for everyone.</p>
+  <a class="rv-btn" href="visual.html"><span aria-hidden="true">📊</span> See the summary in icons</a>
+</header>
+
+<main class="wrap">
+
+<section class="answer-box" aria-labelledby="h-curta">
+  <h2 id="h-curta">The short answer</h2>
+  <p class="lg">Each government did a piece. <b>Lula</b>, in his first term, launched the first federal grant call for games, in 2004. Under <b>Dilma</b>, games became eligible for the Rouanet Law in 2011, and Ancine's first grant call was announced; it came out under <b>Temer</b>: R$10 million for 23 games. <b>Bolsonaro</b> cut the federal tax on consoles from 50% to 20%. <b>Lula</b>, in his third term, signed the Games Legal Framework, which came from a bill by deputy Kim Kataguiri, and regulated it on October 14, 2026, with R$200 million from Finep. The number of studios in the country went from 375 to 1,009 between 2018 and 2022.</p>
+</section>
+
+<section aria-labelledby="h-tipos">
+  <h2 id="h-tipos">Four ways to help games</h2>
+  <p class="sub lg">Before comparing governments, it helps to know that “helping games” can mean very different things:</p>
+  <div class="parts">
+    <div class="part" style="--c:var(--accent)"><b>💰</b><span>Direct money</span><small>Grant calls that pay for game production, like Ancine's</small></div>
+    <div class="part" style="--c:var(--dist)"><b>🧾</b><span>Lower taxes</span><small>Like the cut in the IPI on consoles. It makes the device cheaper, but does not pay those who make games</small></div>
+    <div class="part" style="--c:var(--state)"><b>📜</b><span>Law</span><small>Rules that recognize the sector and open doors, like the Legal Framework</small></div>
+    <div class="part" style="--c:var(--eth)"><b>🏦</b><span>Credit and training</span><small>Loans, courses, labs and fairs</small></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-gov">
+  <h2 id="h-gov">What each government did</h2>
+  <p class="sub lg">Federal decisions for games, one by one, with the source.</p>
+
+  <div class="gov" style="--c:var(--g-lula)">
+    <div class="gh"><h3>Lula, 1st and 2nd terms</h3><span>2003 – 2010</span></div>
+    <ul>
+      <li><b>JogosBR, 2004.</b> The federal government's first grant call to fund game production in the country, launched at the Ministry of Culture. <span class="tg d">Documented</span></li>
+      <li><b>Little beyond that.</b> We found no other federal policy just for games in the period. <span class="tg d">Documented</span></li>
+    </ul>
+    <span class="src"><a href="https://revistageminis.ufscar.br/index.php/geminis/article/view/117" target="_blank" rel="noopener">Revista Geminis: the JogosBR 2004 call</a></span>
+  </div>
+
+  <div class="gov" style="--c:var(--g-dilma)">
+    <div class="gh"><h3>Dilma Rousseff</h3><span>2011 – May 2016</span></div>
+    <ul>
+      <li><b>Rouanet Law opened to games, 2011.</b> Game projects become able to raise sponsorship with a discount on companies' income tax, like films. <span class="tg d">Documented</span></li>
+      <li><b>BNDES enters the sector, 2013 to 2015.</b> It sponsors the BIG festival from 2013, funds a USP study that mapped the sector and invests in two studios through funds. The bank's credit lines, however, had never been used by game companies. <span class="tg d">Documented</span></li>
+      <li><b>First Ancine grant call announced, 2015.</b> Ancine and the Ministry of Culture announce a call for about 20 games featuring Brazilian culture, with money from the Audiovisual Sector Fund, which comes from the sector itself and not from the Treasury. <span class="tg d">Documented</span></li>
+    </ul>
+    <span class="src"><a href="https://www.baguete.com.br/noticias/game-aposta-na-lei-rouanet-para-decolar" target="_blank" rel="noopener">Baguete: Rouanet for games</a><a href="https://web.bndes.gov.br/bib/jspui/bitstream/1408/9616/2/BNDES%20Setorial%2042%20Como%20a%20ind%c3%bastria%20brasileira%20de%20jogos%20digitais%20pode%20passar%20de%20fase_P_BD.pdf" target="_blank" rel="noopener">BNDES Setorial 42</a><a href="https://istoedinheiro.com.br/governo-tera-edital-para-jogos-eletronicos" target="_blank" rel="noopener">IstoÉ Dinheiro: call announced</a></span>
+  </div>
+
+  <div class="gov" style="--c:var(--g-temer)">
+    <div class="gh"><h3>Michel Temer</h3><span>May 2016 – 2018</span></div>
+    <ul>
+      <li><b>The call gets off the ground, 2016 and 2017.</b> Ancine launches the call in December 2016 and, in May 2017, announces R$10 million for 23 independent Brazilian games, under the Brasil de Todas as Telas program, created by the previous government. <span class="tg d">Documented</span></li>
+    </ul>
+    <span class="src"><a href="https://antigo.ancine.gov.br/sites/default/files/releases/2016_12_05_%20prodav14-lancamento.pdf" target="_blank" rel="noopener">Ancine: launch, Dec 2016</a><a href="https://dol.com.br/entretenimento/games/noticia-412206-ancine-investira-r-10-milhoes-para-producao-de-23-jogos-independentes-nacionais.html" target="_blank" rel="noopener">DOL: R$10 million for 23 games</a></span>
+  </div>
+
+  <div class="gov" style="--c:var(--g-bolso)">
+    <div class="gh"><h3>Jair Bolsonaro</h3><span>2019 – 2022</span></div>
+    <ul>
+      <li><b>Console tax cut three times.</b> The IPI on video games falls from 50% to 40% in August 2019, to 30% in October 2020 and to 20% in August 2021. Handheld devices fall from 20% to zero. The government said it was to encourage the sector. <span class="tg d">Documented</span></li>
+      <li><b>Little new money for those who make games.</b> We found no new federal grant call just for games in the period. <span class="tg d">Documented</span></li>
+    </ul>
+    <span class="src"><a href="https://tecnoblog.net/302874/bolsonaro-reduz-imposto-consoles-acessorios-videogame/" target="_blank" rel="noopener">Tecnoblog: 2019 cut</a><a href="https://exame.com/economia/bolsonaro-publica-decreto-que-reduz-imposto-para-videogames-o-que-muda" target="_blank" rel="noopener">Exame: 2020 cut</a><a href="https://olhardigital.com.br/2021/08/12/games-e-consoles/bolsonaro-reduz-imposto-de-videogames/" target="_blank" rel="noopener">Olhar Digital: 2021 cut</a></span>
+  </div>
+
+  <div class="gov" style="--c:var(--g-lula)">
+    <div class="gh"><h3>Lula, 3rd term</h3><span>2023 – today</span></div>
+    <ul>
+      <li><b>Games Legal Framework, May 2024.</b> Lula signs Law 14.852, which came from a bill by deputy Kim Kataguiri, of União, approved by the Chamber and the Senate. The law recognizes games as culture and as research and innovation, opens the Rouanet Law and the Audiovisual Law, gives special treatment to studios with revenue of up to R$16 million a year and leaves betting out. <span class="tg d">Documented</span></li>
+      <li><b>Regulation and package, October 14, 2026.</b> Eleven days before the runoff, Lula signs the decree regulating the law and announces: R$200 million from Finep for early-stage game companies and other digital solutions, cheaper credit in the Audiovisual Sector Fund, the public Game Brasil platform and game courses at five federal universities. <span class="tg d">Documented</span></li>
+      <li><b>Part of it is a promise for 2027.</b> Two Ministry of Culture lines expect to raise R$50 million each in 2027, and an MCTI program expects R$100 million of private money in 2027 and 2028. The changes to Ancine's credit still need approval. <span class="tg o">Open</span></li>
+    </ul>
+    <span class="src"><a href="https://www.migalhas.com.br/quentes/406692/lula-sanciona-lei-que-cria-o-marco-legal-dos-jogos-eletronicos" target="_blank" rel="noopener">Migalhas: Law 14.852</a><a href="https://www.congressoemfoco.com.br/noticia/123246/governo-regulamenta-setor-de-games-e-cria-sistema-de-jogos-nacionais" target="_blank" rel="noopener">Congresso em Foco: regulation</a><a href="https://ncnews.com.br/2026/10/14/lula-marco-legal-games-200-milhoes/" target="_blank" rel="noopener">NC News: package figures</a></span>
+  </div>
+</section>
+
+<section aria-labelledby="h-depara">
+  <h2 id="h-depara">Side by side</h2>
+  <table class="dp dp5">
+    <thead><tr><th></th><th>Direct money</th><th>Tax</th><th>Law</th></tr></thead>
+    <tbody>
+      <tr><th>Lula 1 and 2</th><td data-l="Direct money">JogosBR grant call, 2004</td><td data-l="Tax">—</td><td data-l="Law">—</td></tr>
+      <tr><th>Dilma</th><td data-l="Direct money">Ancine call announced; BNDES sponsors BIG</td><td data-l="Tax">Rouanet opened to games: income tax discount for sponsors</td><td data-l="Law">—</td></tr>
+      <tr><th>Temer</th><td data-l="Direct money">R$10 million for 23 games, through Ancine</td><td data-l="Tax">—</td><td data-l="Law">—</td></tr>
+      <tr><th>Bolsonaro</th><td data-l="Direct money">No new grant call found</td><td data-l="Tax">Console IPI from 50% to 20%</td><td data-l="Law">—</td></tr>
+      <tr><th>Lula 3</th><td data-l="Direct money">R$200 million from Finep announced in 2026; more lines for 2027</td><td data-l="Tax">—</td><td data-l="Law">Legal Framework signed in 2024 and regulated in 2026</td></tr>
+    </tbody>
+  </table>
+  <p class="note">“—” means we found no federal measure of this type in the period. States and cities, such as São Paulo, also have their own grant calls, which are not included here.</p>
+</section>
+
+<section aria-labelledby="h-ipi">
+  <h2 id="h-ipi">The tax on consoles</h2>
+  <p class="sub lg">The IPI is a federal tax on manufactured products. For video games, it fell like this under Bolsonaro:</p>
+  <div class="tl" id="ipi" role="img" aria-label="Console IPI: 50% until 2019, 40% in August 2019, 30% in October 2020, 20% in August 2021"></div>
+  <p class="lg">The cut makes the device cheaper for players. But the IPI is <b>only one of the taxes</b> on a console, and it puts no money in the pockets of those who make games in Brazil.</p>
+  <span class="src"><a href="https://tecnoblog.net/302874/bolsonaro-reduz-imposto-consoles-acessorios-videogame/" target="_blank" rel="noopener">Tecnoblog: 50% to 40%</a><a href="https://exame.com/economia/bolsonaro-publica-decreto-que-reduz-imposto-para-videogames-o-que-muda" target="_blank" rel="noopener">Exame: 40% to 30%</a><a href="https://olhardigital.com.br/2021/08/12/games-e-consoles/bolsonaro-reduz-imposto-de-videogames/" target="_blank" rel="noopener">Olhar Digital: 30% to 20%</a></span>
+</section>
+
+<section aria-labelledby="h-estudios">
+  <h2 id="h-estudios">How many studios Brazil has</h2>
+  <div class="two">
+    <div class="card" style="--c:var(--muted)"><span class="big">375</span><p>game studios, in Abragames' 2018 survey</p></div>
+    <div class="card" style="--c:var(--accent)"><span class="big">1,009</span><p>studios in 2022, a rise of 169%, according to Abragames and ApexBrasil</p></div>
+  </div>
+  <p class="lg">The sector grew a lot between 2018 and 2022, mostly under Bolsonaro. But the number of studios also depends on the market, the pandemic and digital stores, not only on the government. The share of women on teams went from 15% in 2014 to 29.8% in 2022.</p>
+  <span class="src"><a href="https://canaltech.com.br/games/brasil-tem-mais-de-mil-estudios-de-games-revela-pesquisa-220393/" target="_blank" rel="noopener">Canaltech: 1,009 studios</a><a href="https://forbes.com.br/forbes-tech/2022/07/em-quatro-anos-industria-brasileira-de-games-cresceu-169/" target="_blank" rel="noopener">Forbes: 169% rise</a></span>
+</section>
+
+<section aria-labelledby="h-vf">
+  <h2 id="h-vf">Is it true?</h2>
+  <div class="vf">
+    <div class="vfi"><span class="badge v">True</span><p><b>“Bolsonaro lowered the tax on video games.”</b> The IPI on consoles fell from 50% to 20% in three decrees, from 2019 to 2021.</p></div>
+    <div class="vfi"><span class="badge m">Half true</span><p><b>“Lula created the Games Legal Framework.”</b> He signed the law in 2024 and regulated it in 2026. But the bill is by deputy Kim Kataguiri, of União, and it was approved by Congress.</p></div>
+    <div class="vfi"><span class="badge f">False</span><p><b>“Before 2024, the federal government never helped games.”</b> There was the JogosBR call in 2004, the Rouanet Law opened to games in 2011 and R$10 million from Ancine for 23 games in 2017.</p></div>
+    <div class="vfi"><span class="badge f">False</span><p><b>“Games can only use the Rouanet Law now, under Lula.”</b> They have been able to since 2011. The 2024 Legal Framework reinforced this, and the 2026 package created support to help projects raise funds.</p></div>
+    <div class="vfi"><span class="badge m">Half true</span><p><b>“The government will give R$200 million to games.”</b> It is a Finep call for early-stage companies in games and other digital solutions, not only games. Other lines are for 2027 and depend on fundraising.</p></div>
+    <div class="vfi"><span class="badge v">True</span><p><b>“The Legal Framework does not apply to betting.”</b> The law says games with bets, prizes or random outcomes are not electronic games and do not receive the benefits.</p></div>
+    <div class="vfi"><span class="badge o">Not shown</span><p><b>“The October package was made to win the election.”</b> It came out 11 days before the runoff, and part of it is a promise for 2027. But the law is from 2024, and a date does not prove intent.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-resumo">
+  <div class="verdict">
+    <h2 id="h-resumo">In short</h2>
+    <ul>
+      <li>Federal support for games began with <b>Lula in 2004</b> and grew little by little under <b>Dilma</b> and <b>Temer</b>, with the Rouanet Law and the Ancine call.</li>
+      <li><b>Bolsonaro</b> bet on <b>lower taxes</b> on consoles, which helps those who buy, not those who make games.</li>
+      <li><b>Lula 3</b> made the <b>biggest change in the rules</b>, the Legal Framework, which came from an opposition deputy, and the largest package announced. Part of it is still a promise.</li>
+      <li>Studios nearly tripled between 2018 and 2022, but that has many causes beyond the government.</li>
+    </ul>
+  </div>
+</section>
+
+<details class="mais">
+  <summary>Want to see all the decisions in a table? Tap here</summary>
+  <div class="mais-body">
+    <div class="tbl"><table>
+      <tr><th>Date</th><th>Government</th><th>Decision</th><th>Type</th></tr>
+      <tr><td>2004</td><td>Lula</td><td>JogosBR grant call, from the Ministry of Culture</td><td>Direct money</td></tr>
+      <tr><td>2011</td><td>Dilma</td><td>Games can raise funds through the Rouanet Law</td><td>Tax</td></tr>
+      <tr><td>2013–2015</td><td>Dilma</td><td>BNDES sponsors the BIG Festival and funds a USP study</td><td>Training and credit</td></tr>
+      <tr><td>01/10/2015</td><td>Dilma</td><td>Ancine and MinC announce a games call</td><td>Direct money</td></tr>
+      <tr><td>05/12/2016</td><td>Temer</td><td>Ancine launches the call</td><td>Direct money</td></tr>
+      <tr><td>05/05/2017</td><td>Temer</td><td>R$10 million for 23 games</td><td>Direct money</td></tr>
+      <tr><td>15/08/2019</td><td>Bolsonaro</td><td>Console IPI: 50% to 40%</td><td>Tax</td></tr>
+      <tr><td>Oct/2020</td><td>Bolsonaro</td><td>Console IPI: 40% to 30%</td><td>Tax</td></tr>
+      <tr><td>11/08/2021</td><td>Bolsonaro</td><td>Console IPI: 30% to 20%</td><td>Tax</td></tr>
+      <tr><td>03/05/2024</td><td>Lula</td><td>Games Legal Framework, Law 14.852</td><td>Law</td></tr>
+      <tr><td>14/10/2026</td><td>Lula</td><td>Regulation and package: R$200 million from Finep, Game Brasil, courses</td><td>Law and money</td></tr>
+    </table></div>
+  </div>
+</details>
+
+<footer>
+  <p>Every decision links to where it came from.</p>
+  <p>Updated on October 15, 2026.</p>
+</footer>
+
+<section id="fontes-revisao" aria-labelledby="h-fontes-revisao" style="margin-block:32px;padding:20px;border:1px solid var(--line);border-radius:6px">
+<h2 id="h-fontes-revisao">Sources and limits of this reading</h2>
+<p>This route lists federal measures found in news reports, laws and official documents. It is not a complete inventory: states and cities have their own grant calls, and there may be smaller support that never made the news. Grant values are the announced amounts; we did not check how much was actually paid. The studio count comes from Abragames surveys whose methods changed over time. A sector that grows under a government does not prove it grew because of it.</p>
+<p style="font-size:14px"><a href="https://fcarvalhodev.github.io/rotas/en/metodologia.html">How we tell facts, allegations and interpretations apart</a> · Editorial review: October 15, 2026.</p>
+</section>
+</main>
+
+<script>
+(function(){
+const bars=(id,rows,max)=>{const el=document.getElementById(id);if(!el)return;el.innerHTML=rows.map(r=>{const w=r[2]/max*100;return `<div class="tr"><div class="lab">${r[0]}<span>${r[1]}</span></div><div class="t"><span class="f" style="--c:${r[3]};width:${w}%">${r[4]}</span></div></div>`}).join('')};
+bars('ipi',[["Until 2019","before the first cut",50,"var(--muted)","50%"],["August 2019","1st decree",40,"var(--g-bolso)","40%"],["October 2020","2nd decree",30,"var(--g-bolso)","30%"],["August 2021","3rd decree",20,"var(--g-bolso)","20%"]],50);
+})();
+</script>
+
+</body></html>
