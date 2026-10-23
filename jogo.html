@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Game Over pro Boato</title>
+<meta name="description" content="Cada fase traz uma frase sobre incentivo aos games no Brasil. Derrote o chefão do boato sem gastar todas as vidas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fcarvalhodev.github.io/rotas/jogos/jogo.css">
+<style>
+:root{--accent:#6d28d9;--hero:#4c1d95}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#c4b5fd;--hero:#4c1d95}}
+:root[data-theme="dark"]{--accent:#c4b5fd;--hero:#4c1d95}
+.hero{background:var(--hero);border-color:var(--hero)}.hero .go a{color:var(--hero)}
+</style>
+</head><body>
+<style>/* barra comum das Rotas */.rotas-bar .rb-lang{margin-left:auto;color:var(--accent);font-weight:600}.rotas-bar{border-bottom:1px solid var(--line);background:var(--bg);font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}.rotas-bar>div{max-width:880px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}.rotas-bar a{color:var(--muted);text-decoration:none;padding-block:2px;border-bottom:2px solid transparent}.rotas-bar a:hover{color:var(--ink)}.rotas-bar a[aria-current]{color:var(--ink);border-bottom-color:var(--accent)}.rotas-bar .rb-home{color:var(--accent);font-weight:600}.rv-btn{display:inline-flex;align-items:center;gap:8px;justify-self:start;font-family:var(--ui,system-ui);font-weight:800;font-size:16px;letter-spacing:.02em;text-decoration:none;color:var(--paper,#fff);background:var(--accent);padding:10px 16px;border-radius:999px;box-shadow:0 2px 0 rgba(0,0,0,.15)}.rv-btn:hover{filter:brightness(1.08)}.rv-btn:focus-visible{outline:3px solid var(--ink);outline-offset:2px}.rotas-bar a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}</style><nav class="rotas-bar" aria-label="Rotas"><div><a class="rb-home" href="https://fcarvalhodev.github.io/rotas/">Rotas</a><a href="https://fcarvalhodev.github.io/rota-washington/">Washington</a><a href="https://fcarvalhodev.github.io/rota-master/">Master</a><a href="https://fcarvalhodev.github.io/rota-curitiba/">Curitiba</a><a href="https://fcarvalhodev.github.io/rota-da-fe/">Fé</a><a href="https://fcarvalhodev.github.io/rota-esplanada/">Esplanada</a><a href="https://fcarvalhodev.github.io/rota-itamaraty/">Itamaraty</a><a href="https://fcarvalhodev.github.io/rota-da-picanha/">Picanha</a><a href="https://fcarvalhodev.github.io/rota-do-ibge/">IBGE</a><a href="https://fcarvalhodev.github.io/rota-velho-chico/">Velho Chico</a><a href="https://fcarvalhodev.github.io/rota-do-tesouro/">Tesouro</a><a href="https://fcarvalhodev.github.io/rota-rouanet/">Rouanet</a><a href="https://fcarvalhodev.github.io/rota-dos-ventos/">Ventos</a><a href="https://fcarvalhodev.github.io/rota-do-algoritmo/">Algoritmo</a><a href="https://fcarvalhodev.github.io/rota-do-posto/">Posto</a><a href="https://fcarvalhodev.github.io/rota-das-queimadas/">Queimadas</a><a href="https://fcarvalhodev.github.io/rota-dos-games/" aria-current="page">Games</a><a href="https://fcarvalhodev.github.io/rota-do-contracheque/">Contracheque</a><a href="https://fcarvalhodev.github.io/rota-palantir/">Palantir</a><a class="rb-lang" href="en/jogo.html" hreflang="en" lang="en">EN</a></div></nav>
+<main class="jg" id="jg" aria-live="polite"><noscript>Este jogo precisa de JavaScript. <a href="index.html">Ler a rota</a>.</noscript></main>
+<script>
+window.JG_DATA={
+ "kicker": "Rota dos Games · jogo",
+ "title": "Game Over pro Boato",
+ "host": [
+  "🎮",
+  "Gamer veterano"
+ ],
+ "emo": "👾",
+ "intro": "Cada fase traz uma frase sobre incentivo aos games no Brasil. Derrote o chefão do boato sem gastar todas as vidas.",
+ "rounds": [
+  {
+   "type": "boato",
+   "title": "Fases",
+   "how": "leia a frase que circula e diga se é Verdade, Meia verdade, Falso ou Sem prova.",
+   "n": 7,
+   "items": [
+    {
+     "c": "Bolsonaro baixou o imposto dos videogames.",
+     "v": "v",
+     "e": "O IPI dos consoles caiu de 50% para 20% em três decretos, de 2019 a 2021.",
+     "s": []
+    },
+    {
+     "c": "Lula criou o Marco Legal dos Games.",
+     "v": "m",
+     "e": "Ele sancionou a lei em 2024 e a regulamentou em 2026. Mas o projeto é do deputado Kim Kataguiri, do União, e foi aprovado pelo Congresso.",
+     "s": []
+    },
+    {
+     "c": "Antes de 2024, o governo federal nunca ajudou os games.",
+     "v": "f",
+     "e": "Houve o edital JogosBR em 2004, a Lei Rouanet aberta aos jogos em 2011 e R$ 10 milhões da Ancine para 23 jogos em 2017.",
+     "s": []
+    },
+    {
+     "c": "Games só podem usar a Lei Rouanet agora, com Lula.",
+     "v": "f",
+     "e": "Podem desde 2011. O Marco Legal de 2024 reforçou isso, e o pacote de 2026 criou um apoio para ajudar os projetos a captar.",
+     "s": []
+    },
+    {
+     "c": "O governo vai dar R$ 200 milhões para os games.",
+     "v": "m",
+     "e": "É uma chamada da Finep para empresas iniciantes de games e de outras soluções digitais, não só de jogos. Outras linhas são para 2027 e dependem de captação.",
+     "s": []
+    },
+    {
+     "c": "O Marco Legal não vale para apostas.",
+     "v": "v",
+     "e": "A lei diz que jogos com apostas, prêmios ou resultado aleatório não são jogos eletrônicos e não recebem os benefícios.",
+     "s": []
+    },
+    {
+     "c": "O pacote de outubro foi feito para ganhar a eleição.",
+     "v": "u",
+     "e": "Saiu 11 dias antes do segundo turno, e parte é promessa para 2027. Mas a lei é de 2024, e data não prova intenção.",
+     "s": []
+    }
+   ]
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Game over na primeira fase."
+  ],
+  [
+   40,
+   "Salvou o jogo no meio."
+  ],
+  [
+   65,
+   "Zerou no modo normal."
+  ],
+  [
+   90,
+   "Speedrun sem dano. Lenda."
+  ]
+ ],
+ "quips": {
+  "ok": [
+   "Isso! Pode publicar.",
+   "Na mosca. A fonte agradece.",
+   "Acertou. O grupo da família vai ter que engolir.",
+   "Boa! Checador raiz."
+  ],
+  "no": [
+   "Errou. Mas pelo menos você não compartilhou.",
+   "Quase. Leia a explicação antes de mandar no zap.",
+   "Não foi dessa vez. Acontece até com jornalista.",
+   "Ops. A tia do zap venceu essa."
+  ]
+ },
+ "full": "index.html",
+ "updated": "Rotas · Rota dos Games"
+};
+</script>
+<script src="https://fcarvalhodev.github.io/rotas/jogos/jogo.js"></script>
+</body></html>
